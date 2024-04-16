@@ -11,7 +11,7 @@ def main():
     img = pg.image.load("fig/3.png")
     bird_img = pg.transform.flip(img, True, False)
     tmr = 0
-    clock.tick(10)
+    clock.tick(200)
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT: return
