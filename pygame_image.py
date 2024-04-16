@@ -33,15 +33,16 @@ def main():
         clock.tick(200)
         key_lst = pg.key.get_pressed()
         if key_lst[pg.K_UP]:
-            bird_rct.move_ip((0, -1))
-        if key_lst[pg.K_DOWN]:
-            bird_rct.move_ip((0, 1))
-        if key_lst[pg.K_LEFT]:
-            bird_rct.move_ip((-1, 0))
-        if key_lst[pg.K_RIGHT]:
-            bird_rct.move_ip((2, 0))
+            a = (-1, -1)
+        elif key_lst[pg.K_DOWN]:
+            a = (-1, 1)
+        elif key_lst[pg.K_LEFT]:
+            a = (-1, 0)
+        elif key_lst[pg.K_RIGHT]:
+            a = (2, 0)
         else:
-            bird_rct.move_ip((-1, 0))
+            a = (-1, 0)
+        bird_rct.move_ip(a)
 
 
 if __name__ == "__main__":
